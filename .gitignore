@@ -1,0 +1,24 @@
+*.class
+
+# Package Files #
+*.war
+
+
+# boilerplate generated classes #
+.apt_generated/
+
+
+# Eclipse resources
+.classpath
+.gitignore
+.project
+.settings
+
+# Gradle and Idea resources
+.gradle/
+.idea/
+.java-version
+build/
+*.iml
+local.properties
+
