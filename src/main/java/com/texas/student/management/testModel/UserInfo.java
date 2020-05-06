@@ -1,6 +1,6 @@
 package com.texas.student.management.testModel;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class UserInfo {
     private int id;
@@ -9,14 +9,44 @@ public class UserInfo {
     private String lastName;
     private String email;
     private String phoneNumber;
-    private Date yearEnrolled;
-    private Date dateOfBirth;
+    private Timestamp yearEnrolled;
+    private Timestamp dateOfBirth;
     private Gender gender;
     private String bloodGroup;
     private Address address;
     private Status status;
-    private String disability;
+    private Disability disability;
+    private String ethnicGroup;
+    private String history;
     private String remarks;
+    private Role role;
+
+    public enum Gender {
+        MALE, FEMALE, OTHER
+    }
+
+    public enum Status {
+        ACTIVE, PASSIVE,LEFT
+    }
+
+    public enum Disability{
+        BLIND,DEAF,HANDICAP,IMMOBILE,NULL
+
+    }
+
+    public enum Role{
+        STUDENT,
+        TEACHER,
+        STAFF,
+        ADMIN,
+        LIBRARIAN,
+        HEAD,
+        DRIVER,
+        GUARD,
+        CLEANING
+
+
+    }
 
     public int getId() {
         return id;
@@ -66,19 +96,19 @@ public class UserInfo {
         this.phoneNumber = phoneNumber;
     }
 
-    public Date getYearEnrolled() {
+    public Timestamp getYearEnrolled() {
         return yearEnrolled;
     }
 
-    public void setYearEnrolled(Date yearEnrolled) {
+    public void setYearEnrolled(Timestamp yearEnrolled) {
         this.yearEnrolled = yearEnrolled;
     }
 
-    public Date getDateOfBirth() {
+    public Timestamp getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(Timestamp dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -114,11 +144,11 @@ public class UserInfo {
         this.status = status;
     }
 
-    public String getDisability() {
+    public Disability getDisability() {
         return disability;
     }
 
-    public void setDisability(String disability) {
+    public void setDisability(Disability disability) {
         this.disability = disability;
     }
 
@@ -126,15 +156,23 @@ public class UserInfo {
         return remarks;
     }
 
+    public String getEthnicGroup() {
+        return ethnicGroup;
+    }
+
+    public void setEthnicGroup(String ethnicGroup) {
+        this.ethnicGroup = ethnicGroup;
+    }
+
     public void setRemarks(String remarks) {
         this.remarks = remarks;
     }
 
-    public enum Gender {
-        MALE, FEMALE, OTHER
+    public String getHistory() {
+        return history;
     }
 
-    public enum Status {
-        ACTIVE, PASSIVE
+    public void setHistory(String history) {
+        this.history = history;
     }
 }

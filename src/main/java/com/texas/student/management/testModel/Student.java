@@ -1,12 +1,8 @@
 package com.texas.student.management.testModel;
 
-public class Student{
+public class Student extends UserInfo{
     private String regNumber;
     private String symbolNumber;
-    private String grade;
-    private String section;
-    private String roomNumber;
-    private String ethnicGroup;
     private String house;
     private StudentType studentType;
     private ParentInformation parentInformation;
@@ -26,38 +22,6 @@ public class Student{
 
     public void setSymbolNumber(String symbolNumber) {
         this.symbolNumber = symbolNumber;
-    }
-
-    public String getGrade() {
-        return grade;
-    }
-
-    public void setGrade(String grade) {
-        this.grade = grade;
-    }
-
-    public String getSection() {
-        return section;
-    }
-
-    public void setSection(String section) {
-        this.section = section;
-    }
-
-    public String getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public String getEthnicGroup() {
-        return ethnicGroup;
-    }
-
-    public void setEthnicGroup(String ethnicGroup) {
-        this.ethnicGroup = ethnicGroup;
     }
 
     public String getHouse() {

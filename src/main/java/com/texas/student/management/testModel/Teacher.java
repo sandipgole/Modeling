@@ -1,12 +1,23 @@
 package com.texas.student.management.testModel;
 
+import java.security.SecureRandom;
 import java.sql.Time;
+import java.sql.Timestamp;
 
-public class Teacher
+public class Teacher extends UserInfo
 {
     private String teachingSubject;
-    private Time teachingTime;
+    private Timestamp teachingTime;
+    private String qualification;
+    private String experience;
+    private Type type;
     private UserInfo userInfo;
+
+    public enum Type
+    {
+        PART_TIME,
+        FULL_TIME
+    }
 
     public String getTeachingSubject() {
         return teachingSubject;
@@ -16,11 +27,11 @@ public class Teacher
         this.teachingSubject = teachingSubject;
     }
 
-    public Time getTeachingTime() {
+    public Timestamp getTeachingTime() {
         return teachingTime;
     }
 
-    public void setTeachingTime(Time teachingTime) {
+    public void setTeachingTime(Timestamp teachingTime) {
         this.teachingTime = teachingTime;
     }
 
@@ -30,5 +41,21 @@ public class Teacher
 
     public void setUserInfo(UserInfo userInfo) {
         this.userInfo = userInfo;
+    }
+
+    public String getQualification() {
+        return qualification;
+    }
+
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
+    }
+
+    public String getExperience() {
+        return experience;
+    }
+
+    public void setExperience(String experience) {
+        this.experience = experience;
     }
 }

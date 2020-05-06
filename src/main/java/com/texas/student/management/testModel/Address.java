@@ -2,11 +2,18 @@ package com.texas.student.management.testModel;
 
 public class Address {
     private String country;
-    private String state;
+    private String province;
     private String district;
     private String city;
     private String streetName;
+    private String tole;
+    private int wardNumber;
     private int houseNumber;
+    private AddressType addressType;
+
+    public enum AddressType{
+        PERMANENT,TEMPORARY
+    }
 
     public String getCountry() {
         return country;
@@ -16,12 +23,12 @@ public class Address {
         this.country = country;
     }
 
-    public String getState() {
-        return state;
+    public String getProvince() {
+        return province;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setProvince(String province) {
+        this.province = province;
     }
 
     public String getDistrict() {
@@ -54,6 +61,30 @@ public class Address {
 
     public void setHouseNumber(int houseNumber) {
         this.houseNumber = houseNumber;
+    }
+
+    public String getTole() {
+        return tole;
+    }
+
+    public void setTole(String tole) {
+        this.tole = tole;
+    }
+
+    public int getWardNumber() {
+        return wardNumber;
+    }
+
+    public void setWardNumber(int wardNumber) {
+        this.wardNumber = wardNumber;
+    }
+
+    public AddressType getAddressType() {
+        return addressType;
+    }
+
+    public void setAddressType(AddressType addressType) {
+        this.addressType = addressType;
     }
 }
 

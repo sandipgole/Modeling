@@ -5,6 +5,8 @@ public class ParentInformation {
     private String motherName;
     private String fatherPhone;
     private String motherPhone;
+    private String landLineNumber;
+    private String occupation;
 
     public String getFatherName() {
         return fatherName;
@@ -38,4 +40,19 @@ public class ParentInformation {
         this.motherPhone = motherPhone;
     }
 
+    public String getLandLineNumber() {
+        return landLineNumber;
+    }
+
+    public void setLandLineNumber(String landLineNumber) {
+        this.landLineNumber = landLineNumber;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
 }
